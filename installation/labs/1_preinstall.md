@@ -50,3 +50,25 @@ Here it is already disabled. In case. we want to disable it , we can edit the fi
 `echo never > /sys/kernel/mm/redhat_transparent_hugepage/enabled`
 `echo never > /sys/kernel/mm/redhat_transparent_hugepage/defrag`
 
+## Network Interface Configuration
+```
+[ec2-user@ip-172-31-44-229 ~]$ ifconfig
+eth0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 9001
+        inet 172.31.44.229  netmask 255.255.240.0  broadcast 172.31.47.255
+        inet6 fe80::cd2:85ff:fe48:5be2  prefixlen 64  scopeid 0x20<link>
+        ether 0e:d2:85:48:5b:e2  txqueuelen 1000  (Ethernet)
+        RX packets 5242  bytes 461398 (450.5 KiB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 3559  bytes 516517 (504.4 KiB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 0  (Local Loopback)
+        RX packets 4  bytes 340 (340.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 4  bytes 340 (340.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+```
+
