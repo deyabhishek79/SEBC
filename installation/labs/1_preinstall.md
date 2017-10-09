@@ -153,8 +153,8 @@ synchronised to NTP server (69.89.207.99) at stratum 2
    polling server every 64 s 
 ```
 It was already running. For installation, follow the steps
-### Install using `sudo yum install ntp`
-### Configure the NTP service to run at reboot using `sudo chkconfig ntpd on`
-### Start Start the NTP service using `service ntpd start`
-### Synchronize the node using `ntpdate -u <your_ntp_server>`
-### Synchronize the system clock (to prevent synchronization problems) using `hwclock --systohc`
+Install using `sudo yum install ntp`.
+Configure the NTP service to run at reboot using `sudo chkconfig ntpd on`.
+Start Start the NTP service using `service ntpd start`.
+Synchronize the node using `ntpdate -u <your_ntp_server>`.
+Synchronize the system clock (to prevent synchronization problems) using `hwclock --systohc`.
