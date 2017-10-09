@@ -77,90 +77,7 @@ lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
 
 ```
 [ec2-user@ip-172-31-44-229 ~]$ sudo yum install bind-utils
-Loaded plugins: amazon-id, rhui-lb, search-disabled-repos
-rhui-REGION-client-config-server-7                                                                                         | 2.9 kB  00:00:00     
-rhui-REGION-rhel-server-releases                                                                                           | 3.5 kB  00:00:00     
-rhui-REGION-rhel-server-rh-common                                                                                          | 3.8 kB  00:00:00     
-(1/7): rhui-REGION-rhel-server-releases/7Server/x86_64/group                                                               | 709 kB  00:00:00     
-(2/7): rhui-REGION-client-config-server-7/x86_64/primary_db                                                                | 5.5 kB  00:00:00     
-(3/7): rhui-REGION-rhel-server-rh-common/7Server/x86_64/group                                                              |  104 B  00:00:00     
-(4/7): rhui-REGION-rhel-server-rh-common/7Server/x86_64/updateinfo                                                         |  32 kB  00:00:00     
-(5/7): rhui-REGION-rhel-server-releases/7Server/x86_64/updateinfo                                                          | 2.3 MB  00:00:00     
-(6/7): rhui-REGION-rhel-server-rh-common/7Server/x86_64/primary_db                                                         | 119 kB  00:00:00     
-(7/7): rhui-REGION-rhel-server-releases/7Server/x86_64/primary_db                                                          |  43 MB  00:00:00     
-Resolving Dependencies
---> Running transaction check
----> Package bind-utils.x86_64 32:9.9.4-51.el7 will be installed
---> Processing Dependency: bind-libs = 32:9.9.4-51.el7 for package: 32:bind-utils-9.9.4-51.el7.x86_64
---> Processing Dependency: libGeoIP.so.1()(64bit) for package: 32:bind-utils-9.9.4-51.el7.x86_64
---> Processing Dependency: libbind9.so.90()(64bit) for package: 32:bind-utils-9.9.4-51.el7.x86_64
---> Processing Dependency: libdns.so.100()(64bit) for package: 32:bind-utils-9.9.4-51.el7.x86_64
---> Processing Dependency: libisc.so.95()(64bit) for package: 32:bind-utils-9.9.4-51.el7.x86_64
---> Processing Dependency: libisccc.so.90()(64bit) for package: 32:bind-utils-9.9.4-51.el7.x86_64
---> Processing Dependency: libisccfg.so.90()(64bit) for package: 32:bind-utils-9.9.4-51.el7.x86_64
---> Processing Dependency: liblwres.so.90()(64bit) for package: 32:bind-utils-9.9.4-51.el7.x86_64
---> Running transaction check
----> Package GeoIP.x86_64 0:1.5.0-11.el7 will be installed
----> Package bind-libs.x86_64 32:9.9.4-51.el7 will be installed
---> Processing Dependency: bind-license = 32:9.9.4-51.el7 for package: 32:bind-libs-9.9.4-51.el7.x86_64
---> Running transaction check
----> Package bind-license.noarch 32:9.9.4-29.el7 will be updated
---> Processing Dependency: bind-license = 32:9.9.4-29.el7 for package: 32:bind-libs-lite-9.9.4-29.el7.x86_64
----> Package bind-license.noarch 32:9.9.4-51.el7 will be an update
---> Running transaction check
----> Package bind-libs-lite.x86_64 32:9.9.4-29.el7 will be updated
----> Package bind-libs-lite.x86_64 32:9.9.4-51.el7 will be an update
---> Finished Dependency Resolution
-
-Dependencies Resolved
-
-==================================================================================================================================================
- Package                         Arch                    Version                          Repository                                         Size
-==================================================================================================================================================
-Installing:
- bind-utils                      x86_64                  32:9.9.4-51.el7                  rhui-REGION-rhel-server-releases                  203 k
-Installing for dependencies:
- GeoIP                           x86_64                  1.5.0-11.el7                     rhui-REGION-rhel-server-releases                  1.1 M
- bind-libs                       x86_64                  32:9.9.4-51.el7                  rhui-REGION-rhel-server-releases                  1.0 M
-Updating for dependencies:
- bind-libs-lite                  x86_64                  32:9.9.4-51.el7                  rhui-REGION-rhel-server-releases                  732 k
- bind-license                    noarch                  32:9.9.4-51.el7                  rhui-REGION-rhel-server-releases                   84 k
-
-Transaction Summary
-==================================================================================================================================================
-Install  1 Package  (+2 Dependent packages)
-Upgrade             ( 2 Dependent packages)
-
-Total download size: 3.0 M
-Is this ok [y/d/N]: y
-Downloading packages:
-Delta RPMs disabled because /usr/bin/applydeltarpm not installed.
-(1/5): GeoIP-1.5.0-11.el7.x86_64.rpm                                                                                       | 1.1 MB  00:00:00     
-(2/5): bind-libs-9.9.4-51.el7.x86_64.rpm                                                                                   | 1.0 MB  00:00:00     
-(3/5): bind-libs-lite-9.9.4-51.el7.x86_64.rpm                                                                              | 732 kB  00:00:00     
-(4/5): bind-license-9.9.4-51.el7.noarch.rpm                                                                                |  84 kB  00:00:00     
-(5/5): bind-utils-9.9.4-51.el7.x86_64.rpm                                                                                  | 203 kB  00:00:00     
---------------------------------------------------------------------------------------------------------------------------------------------------
-Total                                                                                                             7.6 MB/s | 3.0 MB  00:00:00     
-Running transaction check
-Running transaction test
-Transaction test succeeded
-Running transaction
-  Installing : GeoIP-1.5.0-11.el7.x86_64                                                                                                      1/7 
-  Updating   : 32:bind-license-9.9.4-51.el7.noarch                                                                                            2/7 
-  Installing : 32:bind-libs-9.9.4-51.el7.x86_64                                                                                               3/7 
-  Installing : 32:bind-utils-9.9.4-51.el7.x86_64                                                                                              4/7 
-  Updating   : 32:bind-libs-lite-9.9.4-51.el7.x86_64                                                                                          5/7 
-  Cleanup    : 32:bind-libs-lite-9.9.4-29.el7.x86_64                                                                                          6/7 
-  Cleanup    : 32:bind-license-9.9.4-29.el7.noarch                                                                                            7/7 
-  Verifying  : 32:bind-libs-lite-9.9.4-51.el7.x86_64                                                                                          1/7 
-  Verifying  : 32:bind-utils-9.9.4-51.el7.x86_64                                                                                              2/7 
-  Verifying  : 32:bind-license-9.9.4-51.el7.noarch                                                                                            3/7 
-  Verifying  : GeoIP-1.5.0-11.el7.x86_64                                                                                                      4/7 
-  Verifying  : 32:bind-libs-9.9.4-51.el7.x86_64                                                                                               5/7 
-  Verifying  : 32:bind-license-9.9.4-29.el7.noarch                                                                                            6/7 
-  Verifying  : 32:bind-libs-lite-9.9.4-29.el7.x86_64                                                                                          7/7 
-
+....
 Installed:
   bind-utils.x86_64 32:9.9.4-51.el7                                                                                                               
 
@@ -173,36 +90,7 @@ Dependency Updated:
 Complete!
 
 [ec2-user@ip-172-31-44-229 ~]$ sudo yum install bind
-Loaded plugins: amazon-id, rhui-lb, search-disabled-repos
-Resolving Dependencies
---> Running transaction check
----> Package bind.x86_64 32:9.9.4-51.el7 will be installed
---> Finished Dependency Resolution
-
-Dependencies Resolved
-
-==================================================================================================================================================
- Package                 Arch                      Version                              Repository                                           Size
-==================================================================================================================================================
-Installing:
- bind                    x86_64                    32:9.9.4-51.el7                      rhui-REGION-rhel-server-releases                    1.8 M
-
-Transaction Summary
-==================================================================================================================================================
-Install  1 Package
-
-Total download size: 1.8 M
-Installed size: 4.3 M
-Is this ok [y/d/N]: y
-Downloading packages:
-bind-9.9.4-51.el7.x86_64.rpm                                                                                               | 1.8 MB  00:00:00     
-Running transaction check
-Running transaction test
-Transaction test succeeded
-Running transaction
-  Installing : 32:bind-9.9.4-51.el7.x86_64                                                                                                    1/1 
-  Verifying  : 32:bind-9.9.4-51.el7.x86_64                                                                                                    1/1 
-
+.....
 Installed:
   bind.x86_64 32:9.9.4-51.el7                                                                                                                     
 
@@ -227,4 +115,46 @@ getent output
 127.0.0.1       localhost localhost.localdomain localhost4 localhost4.localdomain4
 127.0.0.1       localhost localhost.localdomain localhost6 localhost6.localdomain6
 ```
+## Enable NSCD service
+```
+[ec2-user@ip-172-31-44-229 ~]$ systemctl status named
+● named.service - Berkeley Internet Name Domain (DNS)
+   Loaded: loaded (/usr/lib/systemd/system/named.service; disabled; vendor preset: disabled)
+   Active: inactive (dead)
 
+[ec2-user@ip-172-31-44-229 ~]$ sudo systemctl enable named
+Created symlink from /etc/systemd/system/multi-user.target.wants/named.service to /usr/lib/systemd/system/named.service.
+
+[ec2-user@ip-172-31-44-229 ~]$ sudo systemctl status named
+● named.service - Berkeley Internet Name Domain (DNS)
+   Loaded: loaded (/usr/lib/systemd/system/named.service; enabled; vendor preset: disabled)
+   Active: inactive (dead)
+
+[ec2-user@ip-172-31-44-229 ~]$ sudo yum install nscd
+
+[ec2-user@ip-172-31-44-229 ~]$ sudo chkconfig nscd on
+Note: Forwarding request to 'systemctl enable nscd.service'.
+Created symlink from /etc/systemd/system/multi-user.target.wants/nscd.service to /usr/lib/systemd/system/nscd.service.
+Created symlink from /etc/systemd/system/sockets.target.wants/nscd.socket to /usr/lib/systemd/system/nscd.socket.
+```
+## NTPD Service
+
+```
+[ec2-user@ip-172-31-44-229 ~]$ sudo ntpq -p
+     remote           refid      st t when poll reach   delay   offset  jitter
+==============================================================================
+*horp-bsd01.horp 164.67.62.194    2 u   59   64    7   22.204   -0.411   0.549
+ tick.mdacore.ne 130.207.244.240  2 u   60   64    7   33.337   -9.906   0.029
+ 208.76.53.137   71.40.128.146    2 u   58   64    7   26.811   -8.795   0.062
+ ntp1.wiktel.com .PPS.            1 u   54   64    7   38.373    0.889   0.026
+[ec2-user@ip-172-31-44-229 ~]$ sudo ntpstat
+synchronised to NTP server (69.89.207.99) at stratum 2 
+   time correct to within 31 ms
+   polling server every 64 s 
+```
+It was already running. For installation, follow the steps
+Install using `sudo yum install ntp`
+Configure the NTP service to run at reboot using `sudo chkconfig ntpd on`
+Start Start the NTP service using `service ntpd start`
+Synchronize the node using `ntpdate -u <your_ntp_server>`
+Synchronize the system clock (to prevent synchronization problems) using `hwclock --systohc`
