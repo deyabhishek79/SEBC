@@ -219,3 +219,12 @@ Non-authoritative answer:
 Name:	ec2-54-81-172-131.compute-1.amazonaws.com
 Address: 172.31.44.229
 ```
+getent output
+```
+[ec2-user@ip-172-31-44-229 ~]$ getent hosts ip-172-31-44-229
+172.31.44.229   ip-172-31-44-229.ec2.internal
+[ec2-user@ip-172-31-44-229 ~]$ getent hosts
+127.0.0.1       localhost localhost.localdomain localhost4 localhost4.localdomain4
+127.0.0.1       localhost localhost.localdomain localhost6 localhost6.localdomain6
+```
+
