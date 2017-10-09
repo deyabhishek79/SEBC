@@ -37,4 +37,16 @@ mqueue on /dev/mqueue type mqueue (rw,relatime,seclabel)
 tmpfs on /run/user/0 type tmpfs (rw,nosuid,nodev,relatime,seclabel,size=1497312k,mode=700)
 tmpfs on /run/user/1000 type tmpfs (rw,nosuid,nodev,relatime,seclabel,size=1497312k,mode=700,uid=1000,gid=1000)
 ```
+## Disable transparent hugepage support
+```
+[ec2-user@ip-172-31-44-229 ~]$ grep -i HugePages_Total /proc/meminfo 
+HugePages_Total:       0
+[ec2-user@ip-172-31-44-229 ~]$ cat /proc/sys/vm/nr_hugepages 
+0
+[ec2-user@ip-172-31-44-229 ~]$ sysctl vm.nr_hugepages
+vm.nr_hugepages = 0
+```
+Here it is already disabled. In case. we want to disable it , we can edit the file `/boot/grub/grub.conf` and put in the entry `transparent_hugepage=never`. Alternatively, we can also run un the following commands to disable THP on-the-fly
+`echo never > /sys/kernel/mm/redhat_transparent_hugepage/enabled`
+`echo never > /sys/kernel/mm/redhat_transparent_hugepage/defrag`
 
