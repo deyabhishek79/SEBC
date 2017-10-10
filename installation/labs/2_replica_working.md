@@ -141,6 +141,11 @@ All done!  If you've completed all of the above steps, your MariaDB
 installation should now be secure.
 
 Thanks for using MariaDB!
+
+```
+
+Setting up MariaDB database, roles amnd users
+
 ```
 [ec2-user@ip-172-31-44-229 ~]$ mysql -u root -p
 Enter password: 
