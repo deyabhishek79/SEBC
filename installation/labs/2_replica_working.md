@@ -144,7 +144,7 @@ Thanks for using MariaDB!
 
 ```
 
-Setting up MariaDB database, roles amnd users
+Setting up MariaDB databases, roles and user grants
 
 ```
 [ec2-user@ip-172-31-44-229 ~]$ mysql -u root -p
