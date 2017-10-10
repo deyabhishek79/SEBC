@@ -1,11 +1,11 @@
-#System Configuration Checks
-##Check vm.swappiness on all your nodes
+# System Configuration Checks
+## Check vm.swappiness on all your nodes
 ```
 [ec2-user@ip-172-31-44-229 ~]$ sysctl vm.swappiness=1
 [ec2-user@ip-172-31-44-229 ~]$ cat /proc/sys/vm/swappiness
 1
 ```
-##Show the mount attributes of your volume(s)
+## Show the mount attributes of your volume(s)
 ```
 [ec2-user@ip-172-31-44-229 ~]$ mount
 sysfs on /sys type sysfs (rw,nosuid,nodev,noexec,relatime,seclabel)
