@@ -9,6 +9,8 @@ Found 1 items
 -rw-r--r--   3 deyabhishek79 supergroup  351831027 2017-10-11 02:50 /user/deyabhishek79/precious/precious_files.tar.gz
 [deyabhishek79@ip-172-31-41-199 ~]$ hadoop fs -rm -skipTrash /user/deyabhishek79/precious/precious_files.tar.gz
 Deleted /user/deyabhishek79/precious/precious_files.tar.gz
+[deyabhishek79@ip-172-31-41-199 ~]$ hadoop fs -rmdir /user/deyabhishek79/precious/
+rmdir: The directory /user/deyabhishek79/precious cannot be deleted since /user/deyabhishek79/precious is snapshottable and already has snapshots
 [deyabhishek79@ip-172-31-41-199 ~]$ 
 
 ```
