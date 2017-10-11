@@ -100,7 +100,7 @@ do
                      -Dmapreduce.reduce.memory.mb=$k \
                      -Dmapreduce.reduce.java.opts.max.heap=$RED_MB \
                      /user/deyabhishek79/results/tg-10GB-${i}-${j}-${k}  \
-                     /user/${id}/results/ts-10GB-${i}-${j}-${k} 1>>tera_${i}_${j}_${k}.out 2>>tera_${i}_${j}_${k}.err
+                     /user/deyabhishek79/results/ts-10GB-${i}-${j}-${k} 1>>tera_${i}_${j}_${k}.out 2>>tera_${i}_${j}_${k}.err
 
         echo "Dmapreduce.job.maps=$i"
         echo "Dmapreduce.job.reduces=$j"
