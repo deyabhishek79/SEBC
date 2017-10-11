@@ -49,7 +49,19 @@ vm.nr_hugepages = 0
 Here it is already disabled. In case. we want to disable it , we can edit the file `/boot/grub/grub.conf` and put in the entry `transparent_hugepage=never`. Alternatively, we can also run un the following commands to disable THP on-the-fly
 `echo never > /sys/kernel/mm/redhat_transparent_hugepage/enabled`
 `echo never > /sys/kernel/mm/redhat_transparent_hugepage/defrag`
-
+Ran the following as well on every node
+```
+[root@ip-172-31-41-199 ~]#echo never > /sys/kernel/mm/transparent_hugepage/enabled
+[root@ip-172-31-41-199 ~]#echo never > /sys/kernel/mm/transparent_hugepage/defrag
+[root@ip-172-31-41-199 ~]#echo "echo never > /sys/kernel/mm/transparent_hugepage/enabled">>/etc/rc.d/rc.local 
+[root@ip-172-31-41-199 ~]#echo "echo never > /sys/kernel/mm/transparent_hugepage/defrag">>/etc/rc.d/rc.local
+[root@ip-172-31-41-199 ~]#echo "transparent_hugepage=never">>/etc/default/grub
+[root@ip-172-31-41-199 ~]#grub2-mkconfig -o /boot/grub2/grub.cfg
+[root@ip-172-31-41-199 ~]#tuned-adm off
+[root@ip-172-31-41-199 ~]#tuned-adm list
+[root@ip-172-31-41-199 ~]#systemctl stop tuned
+[root@ip-172-31-41-199 ~]#systemctl disable tuned
+```
 ## Network Interface Configuration
 ```
 [ec2-user@ip-172-31-44-229 ~]$ ifconfig
@@ -158,3 +170,10 @@ Configure the NTP service to run at reboot using `sudo chkconfig ntpd on`.
 Start Start the NTP service using `service ntpd start`.
 Synchronize the node using `ntpdate -u <your_ntp_server>`.
 Synchronize the system clock (to prevent synchronization problems) using `hwclock --systohc`.
+
+## SSH Passwordless setup for the root
+Run the following ssh-keygen command on master node, and then copy the id_rsa.pub file to all the nodes' authorized_keys
+```
+[root@ip-172-31-41-199 ~]#ssh-keygen
+[root@ip-172-31-41-199 ~]#echo "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDaG85mXF+sPBU9b382eXXbOKGt+k09aYN0VDYWM7urwkdp0eb3smKEuvu+DpM8T5TUzJeIIT8bmebdRbZHJZWo45IUl2fom0gCBqLgAT2ijlx7c+F1Ui78YB4hF0IOaOW2N6UDvOIFQID5SyyNMrUW34DSmt0CRy3MhenfzRIK9sSm4jETUkyGpaJOitxxLmHp+QpE24xmhHTjji0W5P0Tj5d7SVFXy/t5h3pZqZd8iZve4cf5hDAvbnxNA8kKEij2ZKlQbjdD6C07+xcECpB4RS1Jm2EfFGwKOYzeS4OZ6hnc0Fjlrxcj1WTiJB68KbDJGfwGgllXwaEwPOn1upnL root@ip-172-31-41-199.ec2.internal" >> ~/.ssh/authorized_keys
+```
