@@ -73,3 +73,14 @@ If launching distcp fails, force Kerberos to use TCP instead of UDP by adding th
 [libdefaults]
 udp_preference_limit = 1
 ```
+## Enabling Fallback Configuration
+
+```
+To enable the fallback configuration, for copying between secure and insecure clusters, add the following to the HDFS configuration file, core-default.xml, by using an advanced configuration snippet if you use Cloudera Manager, or editing the file directly otherwise.
+<property>
+  <name>ipc.client.fallback-to-simple-auth-allowed</name>
+  <value>true</value>
+</property>
+
+```
+
