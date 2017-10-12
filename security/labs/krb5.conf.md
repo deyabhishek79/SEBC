@@ -1,3 +1,8 @@
+# krb5 file contents
+
+```
+
+[root@ip-172-31-41-199 ~]# cat /etc/krb5.conf
 [libdefaults]
 default_realm = DEYABHISHEK79.COM
 dns_lookup_kdc = false
@@ -17,3 +22,5 @@ admin_server = ip-172-31-41-199.ec2.internal
 }
 [domain_realm]
 
+
+```

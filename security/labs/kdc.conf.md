@@ -1,3 +1,7 @@
+# kdc file contents
+
+```
+[root@ip-172-31-41-199 ~]# cat /var/kerberos/krb5kdc/kdc.conf
 [kdcdefaults]
  kdc_ports = 88
  kdc_tcp_ports = 88
@@ -12,3 +16,4 @@
   max_renewable_life = 7d
  }
 
+```
