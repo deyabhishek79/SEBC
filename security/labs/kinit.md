@@ -28,7 +28,7 @@ drwxr-xr-x   - deyabhishek79 supergroup          0 2017-10-11 15:46 /user/deyabh
 
 [root@ip-172-31-41-199 ~]# klist
 Ticket cache: FILE:/tmp/krb5cc_0
-Default principal: hadoopuser@DEYABHISHEK79.COM
+Default principal: deyabhishek79@DEYABHISHEK79.COM
 
 Valid starting       Expires              Service principal
 10/11/2017 20:41:35  10/12/2017 20:41:35  krbtgt/DEYABHISHEK79.COM@DEYABHISHEK79.COM
