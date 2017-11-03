@@ -12,9 +12,8 @@ drwxrwxr-t   - hive   hive                0 2017-10-13 11:51 /user/hive
 drwxrwxr-x   - hue    hue                 0 2017-10-13 11:51 /user/hue
 drwxr-xr-x   - hdfs   supergroup          0 2017-10-13 11:58 /user/jimenez
 drwxrwxr-x   - oozie  oozie               0 2017-10-13 11:55 /user/oozie
-
-
 ```
+#### @mfernest: Did not set appropriate ownership for test users
 
 # API Call Results
 

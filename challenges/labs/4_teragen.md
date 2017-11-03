@@ -129,6 +129,5 @@ Found 9 items
 -rw-r--r--   3 hdfs supergroup  819200000 2017-10-13 12:15 /user/jimenez/tgen/part-m-00005
 -rw-r--r--   3 hdfs supergroup  819200000 2017-10-13 12:15 /user/jimenez/tgen/part-m-00006
 -rw-r--r--   3 hdfs supergroup  819200000 2017-10-13 12:15 /user/jimenez/tgen/part-m-00007
-
-
 ```
+Note that you've run the job as the superuser `hdfs`, not the test user `jimenez`
