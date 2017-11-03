@@ -69,8 +69,6 @@ Address: 172.31.47.237
 
 ```
 
-```
-
 [root@ip-172-31-34-47 .ssh]# df -h .
 Filesystem      Size  Used Avail Use% Mounted on
 /dev/xvda2       40G  1.8G   39G   5% /
@@ -176,6 +174,8 @@ ip-172-31-47-237.ec2.internal
 ```
 
 ## Create the group paloalto and add frankola to it
+
+```
 [root@ip-172-31-34-47 .ssh]# for i in `cat hosts`; do echo $i; ssh $i "groupadd paloalto";done
 ip-172-31-34-47.ec2.internal
 ip-172-31-44-218.ec2.internal
