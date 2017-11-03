@@ -90,3 +90,57 @@ user	0m6.021s
 sys	0m0.286s
 
 ```
+# Teragen Output
+
+```
+
+[reilly@ip-172-31-34-47 ~]$ hadoop fs -ls  /user/reilly/tgen
+Found 13 items
+-rw-r--r--   3 reilly supergroup          0 2017-11-03 16:45 /user/reilly/tgen/_SUCCESS
+-rw-r--r--   3 reilly supergroup  546133400 2017-11-03 16:45 /user/reilly/tgen/part-m-00000
+-rw-r--r--   3 reilly supergroup  546133300 2017-11-03 16:45 /user/reilly/tgen/part-m-00001
+-rw-r--r--   3 reilly supergroup  546133300 2017-11-03 16:45 /user/reilly/tgen/part-m-00002
+-rw-r--r--   3 reilly supergroup  546133400 2017-11-03 16:45 /user/reilly/tgen/part-m-00003
+-rw-r--r--   3 reilly supergroup  546133300 2017-11-03 16:45 /user/reilly/tgen/part-m-00004
+-rw-r--r--   3 reilly supergroup  546133300 2017-11-03 16:45 /user/reilly/tgen/part-m-00005
+-rw-r--r--   3 reilly supergroup  546133400 2017-11-03 16:45 /user/reilly/tgen/part-m-00006
+-rw-r--r--   3 reilly supergroup  546133300 2017-11-03 16:45 /user/reilly/tgen/part-m-00007
+-rw-r--r--   3 reilly supergroup  546133300 2017-11-03 16:45 /user/reilly/tgen/part-m-00008
+-rw-r--r--   3 reilly supergroup  546133400 2017-11-03 16:45 /user/reilly/tgen/part-m-00009
+-rw-r--r--   3 reilly supergroup  546133300 2017-11-03 16:45 /user/reilly/tgen/part-m-00010
+-rw-r--r--   3 reilly supergroup  546133300 2017-11-03 16:45 /user/reilly/tgen/part-m-00011
+
+```
+
+# FSCK
+
+```
+
+[reilly@ip-172-31-34-47 ~]$ hadoop fsck -blocks /user/reilly/tgen
+DEPRECATED: Use of this script to execute hdfs command is deprecated.
+Instead use the hdfs command for it.
+
+Connecting to namenode via http://ip-172-31-34-47.ec2.internal:50070
+FSCK started by reilly (auth:KERBEROS_SSL) from /172.31.34.47 for path /user/reilly/tgen at Fri Nov 03 17:22:07 EDT 2017
+.............Status: HEALTHY
+ Total size:	6553600000 B
+ Total dirs:	1
+ Total files:	13
+ Total symlinks:		0
+ Total blocks (validated):	204 (avg. block size 32125490 B)
+ Minimally replicated blocks:	204 (100.0 %)
+ Over-replicated blocks:	0 (0.0 %)
+ Under-replicated blocks:	0 (0.0 %)
+ Mis-replicated blocks:		0 (0.0 %)
+ Default replication factor:	3
+ Average block replication:	3.0
+ Corrupt blocks:		0
+ Missing replicas:		0 (0.0 %)
+ Number of data-nodes:		4
+ Number of racks:		1
+FSCK ended at Fri Nov 03 17:22:07 EDT 2017 in 14 milliseconds
+
+
+The filesystem under path '/user/reilly/tgen' is HEALTHY
+
+``` 
