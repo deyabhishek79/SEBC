@@ -266,3 +266,4 @@
   } ]
 }
 ```
+Listing from `hdfs dfs -ls /users` is missing
